@@ -8,7 +8,7 @@
 
 [sub_resource type="DynamicFontData" id=1]
 antialiased = false
-font_path = "res://nokiafc22.ttf"
+font_path = "res://ui/nokiafc22.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 size = 8
