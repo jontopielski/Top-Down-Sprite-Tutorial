@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ui/arrows/Up.png" type="Texture" id=1]
+[ext_resource path="res://ui/arrows/Down.png" type="Texture" id=2]
+[ext_resource path="res://ui/arrows/Left.png" type="Texture" id=3]
+[ext_resource path="res://ui/arrows/Right.png" type="Texture" id=4]
+[ext_resource path="res://ui/OnScreenKeyboard.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFontData" id=1]
+antialiased = false
+font_path = "res://nokiafc22.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = SubResource( 1 )
+
+[node name="OnScreenKeyboard" type="CanvasLayer"]
+script = ExtResource( 5 )
+
+[node name="Keys" type="Node2D" parent="."]
+position = Vector2( 4, -3 )
+
+[node name="Up" type="Sprite" parent="Keys"]
+position = Vector2( 28, 156 )
+texture = ExtResource( 1 )
+hframes = 2
+
+[node name="Down" type="Sprite" parent="Keys"]
+position = Vector2( 28, 171 )
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="Left" type="Sprite" parent="Keys"]
+position = Vector2( 10, 171 )
+texture = ExtResource( 3 )
+hframes = 2
+
+[node name="Right" type="Sprite" parent="Keys"]
+position = Vector2( 46, 171 )
+texture = ExtResource( 4 )
+hframes = 2
+
+[node name="InputX" type="Label" parent="."]
+margin_left = 201.0
+margin_top = 151.0
+margin_right = 231.0
+margin_bottom = 161.0
+custom_fonts/font = SubResource( 2 )
+text = "x: 0.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputY" type="Label" parent="."]
+margin_left = 201.0
+margin_top = 163.0
+margin_right = 231.0
+margin_bottom = 173.0
+custom_fonts/font = SubResource( 2 )
+text = "y: 0.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
